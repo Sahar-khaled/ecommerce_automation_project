@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="136.581">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="9.772">
+        <system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "test@example.com" field...............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="9.271">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with valid "test@example.com" and "P@ssw0rd"................passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="7.414">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "invalid" "tesst@example.com" and "P@sssw0rd"..........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F03_ResetPass | user could reset his/her password successfully" name="user could reset his/her password successfully" time="8.61">
+        <system-out><![CDATA[Given user will go to login page............................................passed
+When user enter valid email and invalid password............................passed
+And user clicks on login button.............................................passed
+And User clicks on forgot password button...................................passed
+And enter his email address.................................................passed
+And enter recover button....................................................passed
+Then success message is shown...............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_Search | users will be able to search for products with different parameters" name="user could search using product name" time="7.819">
+        <system-out><![CDATA[Given user navigate to homepage.............................................passed
+When user click on search bar...............................................passed
+And user search for product like "Apple iCam"...............................passed
+And user click on search Button.............................................passed
+Then user could search and go to search page successfully...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_Search | users will be able to search for products with different parameters" name="user search using SKU" time="7.313">
+        <system-out><![CDATA[Given user navigate to homepage.............................................passed
+When user click on search bar...............................................passed
+And user search for product like "AP_MBP_13"................................passed
+And user click on search Button.............................................passed
+Then user could search with SKU successfully................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F04_Search | users will be able to search for products with different parameters" name="user search using invalid product name" time="5.998">
+        <system-out><![CDATA[Given user navigate to homepage.............................................passed
+When user click on search bar...............................................passed
+And user search for product like "anyThing".................................passed
+And user click on search Button.............................................passed
+Then user could not search..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F05_Currency | user could switch between currencies US-Euro" name="Logged User could switch between currencies" time="31.591">
+        <system-out><![CDATA[Given user navigate to homepage.............................................passed
+When user change current currency to Euro...................................passed
+Then user should found all products prices in Euro..........................passed
+When user change current currency to Dollar.................................passed
+Then user should found all products prices in Dollar........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F06_SelectRandomCategory | user could select different Categories and select sub category" name="Select random category then hover and open sub-Category if found" time="8.157">
+        <system-out><![CDATA[Given user navigate to homepage.............................................passed
+When user hover random category and select subcategory......................passed
+And user click on subcategory if found......................................passed
+Then user go to relative product page.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_FilterByColor | user could filter by color" name="Logged user could filter with color" time="9.355">
+        <system-out><![CDATA[Given user will go to login page............................................passed
+When user enter valid email and valid password..............................passed
+And user click to login button..............................................passed
+And user select apparel category............................................passed
+And user click on shoes.....................................................passed
+And User select red color...................................................passed
+Then red one should be displayed............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F08_ShoppingCart | Logged user could add different products to Shopping cart" name="User add different products to Shopping cart successfully" time="8.889">
+        <system-out><![CDATA[When user add product to shopping cart from main page.......................passed
+And user enter mandatory data about the product.............................passed
+And user add product to shopping cart from product page.....................passed
+Then shopping cart notification success is visible..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F09_WishList  |  guest user could add products to wishlist" name="success message is visible after adding item to wishlist" time="7.856">
+        <system-out><![CDATA[When user go to login page..................................................passed
+And user login with valid "test@example.com" and "P@ssw0rd".................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F09_WishList  |  guest user could add products to wishlist" name="number of wishlist items in home page is increased" time="7.676">
+        <system-out><![CDATA[When user go to login page..................................................passed
+And user login with valid "test@example.com" and "P@ssw0rd".................passed
+Then user press on login button.............................................passed
+And user login to the system successfully...................................passed
+When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+And user get the number of wishlist items after adding item.................passed
+Then the number of wishlist increased.......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F10_CompareList | guest user could add products to compareList" name="product added to compareList successfully" time="6.589">
+        <system-out><![CDATA[When user add product to compareList........................................passed
+Then compareList notification success.......................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
